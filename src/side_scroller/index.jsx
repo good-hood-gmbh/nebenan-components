@@ -75,6 +75,13 @@ class SideScroller extends PureComponent {
     return this.container.current;
   }
 
+  /**
+   * @public
+   */
+  scrollToChild(child) {
+    this.startScrollAnimation(child.offsetLeft);
+  }
+
   startScrollAnimation(target) {
     const node = this.getScrollableNode();
     let time = 0;
